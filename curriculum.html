@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae — Mariya Osadchaya</title>
+  <meta name="description" content="Curriculum Vitae — Mariya Osadchaya">
+  <meta property="og:title" content="Curriculum Vitae — Mariya Osadchaya">
+  <meta property="og:description" content="AI systems, product operations, continental philosophy">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://osadchaya.me/curriculum.html">
+  <meta property="og:image" content="https://osadchaya.me/assets/portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="2" data-active="curriculum.html" data-next="preoccupations.html">
+
+  <main class="page">
+    <h1>Curriculum Vitae</h1>
+
+    <p><a href="assets/resume.pdf">Download PDF version →</a></p>
+
+    <p><em>This page traces the questions my work has addressed.</em></p>
+
+    <ul id="questions">
+      <li><a href="#language">What does it mean for language to <em>do</em> something?</a></li>
+      <li><a href="#adversarial">What happens when AI systems must decide in conditions where mistakes cost lives?</a></li>
+      <li><a href="#accountability">What does accountability look like when the decision-maker is an algorithm?</a></li>
+      <li><a href="#interpretability">What did interpretability mean before it had a name?</a></li>
+      <li><a href="#mathematics">What does rigorous mathematical training teach you about the structure of problems?</a></li>
+      <li><a href="#finance">How do institutions price risk when the rules differ across borders?</a></li>
+      <li><a href="#building">How do you build products for people institutions don't recognize?</a></li>
+    </ul>
+
+    <hr>
+
+    <section id="language" class="resume-section">
+      <h2>What does it mean for language to <em>do</em> something?</h2>
+      <div class="resume-meta">Centre for Continental Philosophy, Royal Holloway · March 2023<br><em>Beyond Searle vs. Derrida: Conceptualizing Speech Acts in NLP</em></div>
+
+      <p>The Searle-Derrida debate is usually framed as analytic versus continental—speech acts as rule-governed performance versus iterability undermining stable meaning. Both positions assume language is primarily representational. Neither maps cleanly onto what language models do.</p>
+
+      <p>LLMs don't "intend" in Searle's sense—no mental state backs the utterance. But they don't merely iterate in Derrida's sense either—they generate novel utterances exhibiting something like pragmatic force. The question isn't whether models have mental states. It's whether the performative framework requires them, or whether that's contingent to how performativity was theorized for human speech.</p>
+
+      <p>The talk proposed treating meaning as topological rather than semantic. An utterance constrains the possible moves that follow; its meaning is the shape of the space it opens or forecloses. "I apologize" changes what can happen next regardless of whether anyone "means" it. I use "topology" both metaphorically and precisely—the Riemann surfaces background isn't incidental.</p>
+
+      <p>The alignment implication: you're not instilling values in a mind; you're sculpting the topology of a generative process. This reframes constitutional AI methods. I find Bai et al. (2022) important here—the observation that general constitutional language often shapes model behavior more effectively than prescriptive rules suggests something about how constraint and generation interact that exceeds purely mechanical accounts.</p>
+
+      <p>Analytic philosophy has been translated into AI work extensively—the behaviorist lineage in RL, reward modeling as philosophy of value, inverse RL and revealed preference theory. I think RLHF is itself a noisy signal, a fairly naive approximation of preference building—much like early Skinnerian conditioning is a naive approximation of human behavior. This doesn't make the conclusions necessarily incorrect; Maslow's hierarchy of needs tells us something real about the general orienteering of man's search for meaning. But we can't allow ourselves to consider the shortcut to be our complete and total vision of humanity. I have particular interest in neuroevolution, decision transformers, and imitation learning as underdeveloped methodologies of directing model behavior.</p>
+
+      <p>Continental philosophy hasn't received the same translation, partly because it doesn't lay out ideas of mind in formally logical language. The talk was an attempt at bidirectional translation for an audience deeply engaged with 20th-century continental thought but largely abdicated from AI.</p>
+
+      <p>I believe the Dreyfus critique—that intelligence requires embodied situatedness—is an important current limiter. He believed this was a concrete, unbreachable limit; I do not. But it's important to think about where language may lack explanatory power that experience can imbue intelligence with.</p>
+
+      <p>The deflationary move—dismissing LLM behavior as mere statistical pattern-matching—seems as inadequate as anthropomorphizing.</p>
+      <p class="back-to-questions"><a href="#questions">↑ Back to questions</a></p>
+    </section>
+
+    <hr>
+
+    <section id="adversarial" class="resume-section">
+      <h2>What happens when AI systems must decide in conditions where mistakes cost lives?</h2>
+      <div class="resume-meta">Humanitarian Defense Initiative · 2022–2024<br>CBRN Information Hazards Workshop · 2025</div>
+
+      <p>From late 2022, I co-led a civilian team deploying language models to counter Russian state information operations and support people fleeing mobilization. The technical stack evolved with the field—BLOOM and GPT-NeoX-20B early, Qwen3-235B and Kimi-K2 later—but model selection was never the interesting problem. The interesting problems were systems problems: data pipelines integrating Telegram APIs, mobile signal patterns, dating network activity, and remote sensing; filtering signal from noise under active adversarial poisoning.</p>
+
+      <p>The hardest problem was information hazard management. The same capabilities that helped people escape could reveal their locations if compromised. I formalized this as the "Orchestra Problem": individually safe instruments producing collectively dangerous music. The solutions were operational—temporal isolation, geographic fuzzing, need-to-know compartmentalization, routing high-stakes decisions to human judgment. 63% accuracy on actionable intelligence (113/180 verified outcomes). 1,500+ conscientious objectors reached safety; 5,000+ received guidance on legal pathways.</p>
+
+      <p>This work shapes my orientation toward AI safety. Much of the generalist safety literature echoes an eschatological structure—a rapture point after which additional work becomes moot. I am not saying to never think about x-risk; that would be ridiculous. But I'm more interested in the full spectrum: short-term risk (state actors, model manipulation, adversarial attack surfaces), medium-term systemic risk (what does it mean for society to adopt LLM use en masse? what does it mean for LLMs to move beyond language models into the physical world?), and the consciousness constraints that arise from lack of being-in-world.</p>
+
+      <p>The CBRN workshop I ran in late 2025 operates in the register of continuous deployment under uncertainty: building detection mechanisms for ongoing deployment rather than preventing a singular catastrophe. Emergence is where the danger lives. You can audit individual agents exhaustively and still miss the catastrophic interaction. I hold this as heuristic rather than claim; we build increasingly complex world models without mistaking them for epistemic truth.</p>
+      <p class="back-to-questions"><a href="#questions">↑ Back to questions</a></p>
+    </section>
+
+    <hr>
+
+    <section id="accountability" class="resume-section">
+      <h2>What does accountability look like when the decision-maker is an algorithm?</h2>
+      <div class="resume-meta">Hong Kong Monetary Authority · Advisory Coalition · 2024–2025<br>European Observatory on Health Systems, LSE · 2022–2023<br>Estonia X-Road · ML Interpretability Advisor · 2020–2021<br>European Space Agency · Workshop Lead · 2019<br>Twitter (Cortex) · Product Manager, Privacy &amp; Transparency · 2020–2021</div>
+
+      <p>When automated systems make consequential decisions, what explanation is owed, to whom, in what form?</p>
+
+      <p>In Hong Kong, I worked on constitutional AI standards for algorithmic accountability in banking, drawing directly on the Anthropic framework. Bai et al. (2022) is key to my conceptualization of constitution. Anthropic's finding that general constitutional language often directs model behavior more effectively than prescriptive rules mirrors my beliefs about constitutionality in state-building. Why do AI models (like states) have an emergent form that exceeds the grammar and concrete language of text? The tension between generative and constraint applies to constitutional AI as it does to states: it serves as both limit and push toward moral and ethical framework. Though I remain aware that constitutional AI framing also drives model adoption, statutory regulation, market signaling—recent discourse has made it harder to evaluate how the technical work has actually developed.</p>
+
+      <p>The Estonia engagement was technically precise. X-Road integrates across government databases—population registry, tax authority, banking supervision, criminal records. EU law requires a "right to explanation" (GDPR Article 22, Recital 71), but this demands meaningful information about decision logic, not interpretability in principle. Post-hoc methods (SHAP, LIME, attention visualization) produce explanations legible to engineers but opaque to citizens. Attention-based approaches were already under critique (Jain &amp; Wallace 2019). Counterfactual explanations (Wachter et al. 2017) don't capture multi-hop reasoning across distributed databases.</p>
+
+      <p>I implemented multi-hop QA techniques drawing on Narang et al. (2020)—training models to generate free-text rationales as part of the prediction pipeline rather than post-hoc reconstruction. The explanation becomes intrinsic to the decision process, which is a stronger position under EU administrative law. X-Road's federated architecture (data stays in source systems, queried in real time) requires interpretability solutions that work across distributed queries; multi-hop QA is architecturally sympathetic because it chains information retrieval across separate sources.</p>
+
+      <p>At Twitter, I created a cross-functional role within the Responsible ML Initiative bridging Cortex, Trust &amp; Safety, Policy, and Communications. I built coordination infrastructure for safety feature releases, ML detection methods for state actor and bot networks, and internal research quantifying algorithmic amplification patterns across 200M+ DAUs. The work was operational—staged rollouts, A/B testing, stakeholder briefings, media inquiry protocols—but the underlying question was the same: when a recommender system amplifies political content, who is accountable, and what does a meaningful explanation look like at that scale?</p>
+      <p class="back-to-questions"><a href="#questions">↑ Back to questions</a></p>
+    </section>
+
+    <hr>
+
+    <section id="interpretability" class="resume-section">
+      <h2>What did interpretability mean before it had a name?</h2>
+      <div class="resume-meta">HM Treasury · Research Consultant · 2012–2013</div>
+
+      <p>In 2012, "interpretability" barely existed as a term outside academic ML. The problem at Treasury was practical: trading algorithms making decisions faster than humans could audit, regulators needing to understand behavior without requiring algorithms to slow down enough to become uncompetitive.</p>
+
+      <p>The context was post-2008 anxiety. Flash crashes had demonstrated that algorithmic trading could produce catastrophic outcomes no individual trader intended. Naive transparency—"show us your code"—was commercially unworkable and technically insufficient. Code generates behavior; it doesn't explain it.</p>
+
+      <p>I was influenced by the ESANN 2012 special session "Making machine learning models interpretable," which framed interpretability as helping analysts understand how models use input variables, emphasizing dimensionality reduction and feature selection. The approach we developed was early RL instrumentation: logging decision points, reconstructing decision-relevant state at each trade, building audit trails that captured which features dominated, what alternatives were considered, where thresholds sat. Unsophisticated by current standards. Explanation is a design constraint rather than afterthought to ML systems.</p>
+      <p class="back-to-questions"><a href="#questions">↑ Back to questions</a></p>
+    </section>
+
+    <hr>
+
+    <section id="mathematics" class="resume-section">
+      <h2>What does rigorous mathematical training teach you about the structure of problems?</h2>
+      <div class="resume-meta">Moscow State University · Mathematics Research · 2004–2007<br>International Mathematical Olympiad · Alternate (Russia) · 2004–2006</div>
+
+      <p>Research on holomorphic functions and Riemann surfaces—the geometry of complex analysis. How functions behave when the underlying space has nontrivial topology; how singularities and branch cuts constrain what's possible; how local properties propagate (or fail to propagate) across global structure.</p>
+
+      <p>The abstraction isn't the point. The point is learning to see structure where it isn't obvious.</p>
+
+      <p>A function that seems multivalued—taking different values depending on how you approach a point—becomes single-valued when you recognize the space it actually lives on. The resolution isn't to fix the function but to find the right space. I later applied this methodologically to volatility modeling (oil/gas futures, working under an MSU professor at a hedge fund): the apparent arbitrage signals that your model's topology is wrong.</p>
+
+      <p>But I've come to think there's always high-dimensional structure behind inconsistency, even when we can't access it adequately. The search for the right space is itself interminable, but productive. The "right space" is never fully available, only approachable through traces. This is a different claim than "find the right space and the inconsistency resolves." This is where Derridean ideas serve as bridge—meaning deferred, structure always incomplete, yet the approximation remains workable.</p>
+
+      <p>IMO training was different: timed problem-solving, pattern recognition, proof discipline. Closer to debugging production systems than to research. Both modes matter.</p>
+      <p class="back-to-questions"><a href="#questions">↑ Back to questions</a></p>
+    </section>
+
+    <hr>
+
+    <section id="finance" class="resume-section">
+      <h2>How do institutions price risk when the rules differ across borders?</h2>
+      <div class="resume-meta">Goldman Sachs · M&amp;A, FIG · London · 2012<br>HgCapital · Growth Equity · London · 2012–2013<br>Kestrel Partners · TMT · London · 2013–2014<br>JRJ Group · FIG &amp; Fintech Turnaround PE · London · 2014–2016<br>Speedinvest · Principal, US Operations · SF/London/Vienna · 2016–2017</div>
+
+      <p>European regulatory frameworks—MiFID II then, the AI Act now—create compliance surfaces. My instinct is to treat them as constraints to design around rather than barriers.</p>
+
+      <p>Five years across five institutions: transaction execution at Goldman, growth equity logic at Hg, opportunistic investing at Kestrel. At JRJ, I coordinated four workstreams on a distressed Southern Italian bank restructuring—loan book write-down, corporate restructuring, IT overhaul, regulatory negotiation—across 40-50 consultants with the Bank of Italy as direct counterparty. 40% revenue uplift. At Speedinvest, I led US operations for a €150M European early-stage fund, running three investments and turnaround work generating 3x revenue growth across portfolio companies.</p>
+      <p class="back-to-questions"><a href="#questions">↑ Back to questions</a></p>
+    </section>
+
+    <hr>
+
+    <section id="building" class="resume-section">
+      <h2>How do you build products for people institutions don't recognize?</h2>
+      <div class="resume-meta">Owntury · Founder/CEO · San Francisco · 2018–2019 · Exit: ~$50M<br>Mercury · Head of Growth &amp; New Products · San Francisco · 2019–2020<br>Mishe · Chief Product Officer · New York · 2021–2022</div>
+
+      <p>Owntury: AI-driven mortgage origination for non-W2 borrowers. $500M+ in loans processed, $1B+ aggregate volume. The technical contribution was dynamic tracking of underlying mortgage status post-origination—real-time visibility into structured products rather than static snapshots. Novel securitization framework improving MBS risk pooling. GTM across 20+ states, 50+ direct employees, 100+ total headcount.</p>
+
+      <p>Mercury: First non-technical hire, eight people to 60+ during hypergrowth. Designed the treasury product—portfolio allocation strategy (15bp advantage), fee structure (2.5bp), tiered launch. $50M committed deposits day one, $200M within months at 30% MoM growth. Built feedback infrastructure connecting 1,500+ weekly support tickets to product roadmap.</p>
+
+      <p>Mishe: Led product, engineering, and marketing for a healthcare startup from 0→1. Co-led $10M seed raise. Drove strategic pivot to union healthcare channels generating $300K+ MRR in new partnerships. Built HIPAA-compliant platform architecture with provider monetization framework and analytics warehouse for future underwriting.</p>
+      <p class="back-to-questions"><a href="#questions">↑ Back to questions</a></p>
+    </section>
+
+    <hr>
+
+    <section class="resume-section">
+      <h2>Education</h2>
+
+      <article class="resume-entry">
+        <h3>London School of Economics and Political Science</h3>
+        <div class="resume-meta">LL.B. · 2009–2012</div>
+        <p>Awards in Constitutional, International, and Intellectual Property Law. Editor-in-Chief, LSE Law Review.</p>
+      </article>
+
+      <article class="resume-entry">
+        <h3>Moscow State University</h3>
+        <div class="resume-meta">Mathematics Research · 2004–2007</div>
+      </article>
+    </section>
+
+    <hr>
+
+    <section class="resume-section">
+      <h2>Additional</h2>
+
+      <h3>Technical Skills</h3>
+
+      <div class="skills-category">
+        <h4>AI/ML &amp; Deployment</h4>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>PyTorch</li>
+          <li>TensorFlow</li>
+          <li>LangChain</li>
+          <li>SuperAGI</li>
+          <li>Milvus</li>
+          <li>pgvector</li>
+          <li>Vector Embeddings</li>
+          <li>AWS</li>
+          <li>GCP</li>
+          <li>Azure</li>
+          <li>Distributed Systems</li>
+          <li>Multi-Agent Orchestration</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Models &amp; Architectures</h4>
+        <ul class="skills-list">
+          <li>BLOOM</li>
+          <li>GPT-NeoX-20B</li>
+          <li>Qwen3-235B</li>
+          <li>Kimi-K2</li>
+          <li>Mistral</li>
+          <li>Pythia</li>
+          <li>Stable Diffusion</li>
+          <li>DreamerV2/V3</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Post-Training &amp; Safety</h4>
+        <ul class="skills-list">
+          <li>LoRA</li>
+          <li>RLHF</li>
+          <li>Quantization</li>
+          <li>Inference Optimization</li>
+          <li>Prompt Engineering</li>
+          <li>Constitutional AI</li>
+          <li>Safety Cases</li>
+          <li>CBRN Risk Assessment</li>
+          <li>Adversarial Robustness</li>
+          <li>Red Team Exercises</li>
+          <li>Information Hazard Analysis</li>
+          <li>Eval Pipelines</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Explainability &amp; Interpretability</h4>
+        <ul class="skills-list">
+          <li>LIME</li>
+          <li>SHAP</li>
+          <li>Attention Mechanisms</li>
+          <li>Multi-hop QA</li>
+          <li>Explanation Generation</li>
+          <li>XAI Techniques</li>
+          <li>Algorithmic Transparency</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Analytics &amp; Product</h4>
+        <ul class="skills-list">
+          <li>Segment</li>
+          <li>Amplitude</li>
+          <li>Mixpanel</li>
+          <li>Looker</li>
+          <li>A/B Testing</li>
+          <li>Product Analytics</li>
+          <li>Custom Dashboards</li>
+          <li>Data Pipelines</li>
+          <li>Intercom</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Regulatory &amp; Compliance</h4>
+        <ul class="skills-list">
+          <li>GDPR</li>
+          <li>MiFID II</li>
+          <li>HIPAA</li>
+          <li>EU AI Act</li>
+          <li>NIST AI RMF</li>
+          <li>Algorithmic Accountability</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Finance &amp; Strategy</h4>
+        <ul class="skills-list">
+          <li>Financial Modeling</li>
+          <li>Securitization</li>
+          <li>M&amp;A</li>
+          <li>Pricing Strategy</li>
+          <li>Portfolio Allocation</li>
+        </ul>
+      </div>
+
+      <h3>Languages</h3>
+      <p>English, Russian (native) · French (B1–B2) · Spanish (A2–B1)</p>
+
+      <p><em>US citizen · Open to Paris relocation</em></p>
+    </section>
+  </main>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
