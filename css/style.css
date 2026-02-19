@@ -486,6 +486,25 @@ sup a {
 }
 
 /* --------------------------------------------------------------------------
+   Section Navigation (inline dot-separated links)
+   -------------------------------------------------------------------------- */
+.section-nav {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.section-nav a {
+  color: var(--color-text-secondary);
+  transition: color 0.15s ease;
+}
+
+.section-nav a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
    Reading List Styles
    -------------------------------------------------------------------------- */
 .reading-item {
