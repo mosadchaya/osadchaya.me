@@ -25,18 +25,31 @@
   const nextPage = body.dataset.next || '';
   const navOpen = body.dataset.navOpen === 'true';
 
+  // Check for ?nav=closed parameter to override default behavior
+  // (used when navigating via hamburger menu vs direct URL visit)
+  const urlParams = new URLSearchParams(window.location.search);
+  const navOverride = urlParams.get('nav');
+  const effectiveNavOpen = navOverride === 'closed' ? false : navOpen;
+
+  // Clean URL after reading parameter
+  if (navOverride) {
+    history.replaceState({}, '', window.location.pathname);
+  }
+
   // Build navigation HTML
   function buildNavLinks() {
     return NAV_LINKS.map(link => {
       const isActive = link.href === activePage ? ' class="active"' : '';
-      return `<li><a href="${link.href}"${isActive}>${link.label}</a></li>`;
+      // Add ?nav=closed to About link so internal navigation skips the overlay
+      const href = link.href === 'index.html' ? 'index.html?nav=closed' : link.href;
+      return `<li><a href="${href}"${isActive}>${link.label}</a></li>`;
     }).join('\n        ');
   }
 
   // Inject navigation overlay
   function injectNav() {
     const navHTML = `
-  <nav class="nav-overlay${navOpen ? '' : ' collapsed'}" role="navigation">
+  <nav class="nav-overlay${effectiveNavOpen ? '' : ' collapsed'}" role="navigation">
     <div class="nav-content">
       <ul class="nav-list">
         ${buildNavLinks()}
@@ -56,7 +69,7 @@
     const headerHTML = `
     <header class="page-header">
       <span></span>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="${navOpen}">☰</button>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="${effectiveNavOpen}">☰</button>
     </header>`;
 
     page.insertAdjacentHTML('afterbegin', headerHTML);
@@ -179,31 +192,12 @@
     });
   }
 
-  // Handle in-page anchor scrolling within .page-content
-  function initAnchorScrolling() {
-    const pageContent = document.querySelector('.page-content');
-    if (!pageContent) return;
-
-    document.addEventListener('click', function(e) {
-      const link = e.target.closest('a[href^="#"]');
-      if (!link) return;
-
-      const targetId = link.getAttribute('href').slice(1);
-      const target = document.getElementById(targetId);
-      if (!target || !pageContent.contains(target)) return;
-
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }
-
   // Initialize
   injectNav();
   injectPageHeader();
   injectPagination();
   wrapPageContent();
   initNav();
-  initAnchorScrolling();
   initAnchorScrolling();
 
 })();
